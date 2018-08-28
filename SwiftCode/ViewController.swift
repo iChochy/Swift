@@ -35,11 +35,27 @@ class ViewController: UIViewController,URLSessionDelegate,URLSessionDataDelegate
     func displayAlertWithTitle(title:String,message:String){
         let controller  = UIAlertController(title: title, message: message, preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
         present(controller, animated: true, completion: nil)
     }
     
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        data.enumerateBytes({
+             (pointer,count,bool) -> Void in
+                let newData = Data(buffer: pointer)
+                self.mutableData.append(newData)
+        })
+    }
     
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        session.finishTasksAndInvalidate()
+        DispatchQueue.main.async {
+            var message = "Finished Downloading your content"
+            if error != nil {
+                message = "Failed to Download your content"
+            }
+            self.displayAlertWithTitle(title: "Done", message: message)
+        }
+    }
     
     
     
@@ -47,39 +63,8 @@ class ViewController: UIViewController,URLSessionDelegate,URLSessionDataDelegate
         super.viewDidAppear(animated)
         
         let url = URL(string: "http://127.0.0.1:8080/1.jpg")!
-        let task = session.dataTask(with: url, completionHandler:{
-            (data,response,error) -> Void in
-            if(error == nil){
-                let manager = FileManager()
-                var error:Error?
-                
-                do{
-                    var destinationPath = try manager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: url, create: true)
-                    
-                    let componentsOfurl = url.absoluteURL.pathComponents
-                    let fileNameForUrl = componentsOfurl[componentsOfurl.count-1]
-                    destinationPath = destinationPath.appendingPathComponent(fileNameForUrl)
-                    manager.createFile(atPath: destinationPath.path, contents: data, attributes: nil)
-                    
-                    let message = "Saved the downloaded data to = \(destinationPath)"
-                    self.displayAlertWithTitle(title: "Success", message: message)
-                    
-                }catch let saveFileError {
-                    error  = saveFileError
-                }
-                
-                if error != nil {
-                    print(error)
-                }
-                
-            }else {
-                self.displayAlertWithTitle(title: "Error", message: "Could not download the data. An error occurred")
-            }
-        })
+        let task = session.dataTask(with: url)
         task.start()
-        
-        
-        
         
     }
     
