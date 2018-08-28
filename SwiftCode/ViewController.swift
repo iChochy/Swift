@@ -16,11 +16,11 @@ extension URLSessionTask{
 }
 
 class ViewController: UIViewController,URLSessionDelegate,URLSessionDataDelegate {
-
+    
     var session:URLSession!
     var mutableData = NSMutableData()
     
-     convenience init() {
+    convenience init() {
         
         self.init(nibName: nil, bundle: nil)
         
@@ -88,14 +88,15 @@ class ViewController: UIViewController,URLSessionDelegate,URLSessionDataDelegate
         
         
     }
-
-   
+    
+    
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
-
+    
 }
+
 

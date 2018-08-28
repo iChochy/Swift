@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A66AE1A21338E0B00BEEB6F /* Swift-11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-11.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A66AE1A21338E0B00BEEB6F /* SwiftCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A66AE1D21338E0B00BEEB6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A66AE1F21338E0B00BEEB6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7A66AE2421338E0D00BEEB6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 		7A66AE1121338E0B00BEEB6F = {
 			isa = PBXGroup;
 			children = (
-				7A66AE1C21338E0B00BEEB6F /* Swift-11 */,
+				7A66AE1C21338E0B00BEEB6F /* SwiftCode */,
 				7A66AE1B21338E0B00BEEB6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,12 +44,12 @@
 		7A66AE1B21338E0B00BEEB6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A66AE1A21338E0B00BEEB6F /* Swift-11.app */,
+				7A66AE1A21338E0B00BEEB6F /* SwiftCode.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7A66AE1C21338E0B00BEEB6F /* Swift-11 */ = {
+		7A66AE1C21338E0B00BEEB6F /* SwiftCode */ = {
 			isa = PBXGroup;
 			children = (
 				7A66AE1D21338E0B00BEEB6F /* AppDelegate.swift */,
@@ -58,15 +58,15 @@
 				7A66AE2621338E0D00BEEB6F /* LaunchScreen.storyboard */,
 				7A66AE2921338E0D00BEEB6F /* Info.plist */,
 			);
-			path = "Swift-11";
+			path = SwiftCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7A66AE1921338E0B00BEEB6F /* Swift-11 */ = {
+		7A66AE1921338E0B00BEEB6F /* SwiftCode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A66AE2C21338E0D00BEEB6F /* Build configuration list for PBXNativeTarget "Swift-11" */;
+			buildConfigurationList = 7A66AE2C21338E0D00BEEB6F /* Build configuration list for PBXNativeTarget "SwiftCode" */;
 			buildPhases = (
 				7A66AE1621338E0B00BEEB6F /* Sources */,
 				7A66AE1721338E0B00BEEB6F /* Frameworks */,
@@ -76,9 +76,9 @@
 			);
 			dependencies = (
 			);
-			name = "Swift-11";
+			name = SwiftCode;
 			productName = "swift-11";
-			productReference = 7A66AE1A21338E0B00BEEB6F /* Swift-11.app */;
+			productReference = 7A66AE1A21338E0B00BEEB6F /* SwiftCode.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7A66AE1521338E0B00BEEB6F /* Build configuration list for PBXProject "Swift-11" */;
+			buildConfigurationList = 7A66AE1521338E0B00BEEB6F /* Build configuration list for PBXProject "SwiftCode" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A66AE1921338E0B00BEEB6F /* Swift-11 */,
+				7A66AE1921338E0B00BEEB6F /* SwiftCode */,
 			);
 		};
 /* End PBXProject section */
@@ -270,12 +270,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9JSTUGQUF;
-				INFOPLIST_FILE = "Swift-11/Info.plist";
+				INFOPLIST_FILE = SwiftCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ichochy.swift-11";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichochy.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -288,12 +288,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9JSTUGQUF;
-				INFOPLIST_FILE = "Swift-11/Info.plist";
+				INFOPLIST_FILE = SwiftCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ichochy.swift-11";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichochy.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -303,7 +303,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7A66AE1521338E0B00BEEB6F /* Build configuration list for PBXProject "Swift-11" */ = {
+		7A66AE1521338E0B00BEEB6F /* Build configuration list for PBXProject "SwiftCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A66AE2A21338E0D00BEEB6F /* Debug */,
@@ -312,7 +312,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A66AE2C21338E0D00BEEB6F /* Build configuration list for PBXNativeTarget "Swift-11" */ = {
+		7A66AE2C21338E0D00BEEB6F /* Build configuration list for PBXNativeTarget "SwiftCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A66AE2D21338E0D00BEEB6F /* Debug */,
