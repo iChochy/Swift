@@ -62,7 +62,7 @@ class ViewController: UIViewController,URLSessionDelegate,URLSessionDataDelegate
         super.viewDidLoad()
         let dataToUpload = "Hello World".data(using: .utf8, allowLossyConversion: false)
         
-        let url = URL(string: "http://127.0.0.1:8080/1.jpg")!
+        let url = URL(string: "http://127.0.0.1:8080/upload")!
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = "POST"
         let task = session.uploadTask(with: request as URLRequest, from: dataToUpload!)
