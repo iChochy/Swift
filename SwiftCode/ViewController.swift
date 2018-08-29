@@ -15,30 +15,15 @@ extension URLSessionTask{
     }
 }
 
-class ViewController: UIViewController,URLSessionDelegate,URLSessionDownloadDelegate,URLSessionTaskDelegate {
+class ViewController: UIViewController,URLSessionDelegate,URLSessionDataDelegate {
     
     var session:URLSession!
-    
-    var configurationIdentifier:String {
-        let userDefaults = UserDefaults.standard
-        let key  = "configurationIdentifier"
-        let previousValue = userDefaults.string(forKey:key)
-        if let thePreviousValue = previousValue {
-            return thePreviousValue
-        }else {
-            let newValue = Date().description
-            userDefaults.set(newValue, forKey: key)
-            userDefaults.synchronize()
-            return newValue
-        }
-    }
-    
     
     convenience init() {
         
         self.init(nibName: nil, bundle: nil)
         
-        let configuration = URLSessionConfiguration.background(withIdentifier: configurationIdentifier)
+        let configuration = URLSessionConfiguration.default
         
         configuration.timeoutIntervalForRequest = 15
         
@@ -46,14 +31,6 @@ class ViewController: UIViewController,URLSessionDelegate,URLSessionDownloadDele
     }
     
     
-    
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        print("Received data")
-    }
-    
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        print("Finished writing the downloaded content to URL \(location)")
-    }
     
     func displayAlertWithTitle(title:String,message:String){
         let controller  = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -75,19 +52,21 @@ class ViewController: UIViewController,URLSessionDelegate,URLSessionDownloadDele
     }
     
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let url = URL(string: "http://127.0.0.1:8080/1.jpg")!
-        let task = session.downloadTask(with: url)
-        task.start()
+
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dataToUpload = "Hello World".data(using: .utf8, allowLossyConversion: false)
         
+        let url = URL(string: "http://127.0.0.1:8080/1.jpg")!
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = "POST"
+        let task = session.uploadTask(with: request as URLRequest, from: dataToUpload!)
+        task.start()
         
     }
     
