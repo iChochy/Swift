@@ -13,6 +13,9 @@ import UIKit
 class ViewController: UIViewController {
 
 
+    let notificationName = "NotificationNameGoesHere"
+    
+    
     override func loadView() {
         
     }
@@ -21,12 +24,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let notification = Notification(name: Notification.Name(rawValue: notificationName), object: self, userInfo:[
+            "key":"value"
+            ]
+        )
+        
+        NotificationCenter.default.post(notification)
         
     }
 
    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
