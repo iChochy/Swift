@@ -9,48 +9,17 @@
 import UIKit
 
 
-extension URLSessionTask{
-    func start(){
-        self.resume()
-    }
-}
-
-class ViewController: UIViewController,URLSessionDelegate,URLSessionDataDelegate {
-    
-    var session:URLSession!
-    
-    convenience init() {
-        
-        self.init(nibName: nil, bundle: nil)
-        
-        let configuration = URLSessionConfiguration.default
-        
-        configuration.timeoutIntervalForRequest = 15
-        
-        session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
-    }
-    
-    
-    
-    func displayAlertWithTitle(title:String,message:String){
-        let controller  = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(controller, animated: true, completion: nil)
-    }
+class ViewController: UIViewController {
     
 
-    
-    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        session.finishTasksAndInvalidate()
-        DispatchQueue.main.async {
-            var message = "Finished Downloading your content"
-            if error != nil {
-                message = "Failed to Download your content"
-            }
-            self.displayAlertWithTitle(title: "Done", message: message)
-        }
-    }
-    
+    let dictionary:[String:Any] = [
+        "firstName":"M",
+        "lastName":"Leo",
+        "agt":32,
+        "children":[
+            "hanhan"
+        ]
+    ]
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -60,15 +29,42 @@ class ViewController: UIViewController,URLSessionDelegate,URLSessionDataDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dataToUpload = "Hello World".data(using: .utf8, allowLossyConversion: false)
         
-        let url = URL(string: "http://127.0.0.1:8080/upload")!
-        let request = NSMutableURLRequest(url: url)
-        request.httpMethod = "POST"
-        let task = session.uploadTask(with: request as URLRequest, from: dataToUpload!)
-        task.start()
-        
+        print(dictionary)
+        let jsonString = dataToJson(dictionary: dictionary)
+        print(jsonString as Any)
+        let newDictionary =  jsonToData(jsonString: jsonString!)
+        print(newDictionary as Any)
     }
+    
+    
+    func dataToJson(dictionary:Dictionary<String,Any>) -> String?{
+        do {
+            let json = try JSONSerialization.data(withJSONObject: dictionary, options:.prettyPrinted)
+            let jsonString = String(bytes: json, encoding: .utf8)
+            return jsonString
+        } catch let error {
+            print(error)
+        }
+        return nil
+    }
+    
+    
+    func jsonToData(jsonString:String) -> Dictionary<String,Any>?{
+        do {
+            let data = jsonString.data(using: .utf8, allowLossyConversion: false)
+            let jsonObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+            if jsonObject is Dictionary<String, Any> {
+                let dictionary = jsonObject as! Dictionary<String, Any>
+                return dictionary
+            }
+        } catch let error {
+            print(error)
+        }
+        return nil
+    }
+    
+    
     
 
     override func didReceiveMemoryWarning() {
