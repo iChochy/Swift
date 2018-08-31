@@ -13,43 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    class func notificationName() -> String{
-        return "SetPersonInfoNotification"
-    }
-    
-    class func personInfoKeyFirstName() -> String {
-        return "firstName"
-    }
-    class func personInfoKeyLastName() -> String {
-        return "lastName"
-    }
-    
-    
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
-        window?.backgroundColor = UIColor.white
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
-
-        let person  = Person()
-        let userInfo = [
-            AppDelegate.personInfoKeyFirstName():"M",
-            AppDelegate.personInfoKeyLastName():"Leo"
-        ]
-        
-        let notification = Notification(name: Notification.Name(rawValue: AppDelegate.notificationName()), object: self, userInfo: userInfo)
-        
-        NotificationCenter.default.post(notification)
-        
-        if let firstName = person.firstName {
-            print("Person`s first name is: \(firstName)")
-        }
-        if let lastName = person.lastName {
-            print("Person`s last name is: \(lastName)")
-        }
-        
+                
         return true
     }
 
