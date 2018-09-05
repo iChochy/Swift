@@ -18,31 +18,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-66-gA9">
-                                <rect key="frame" x="20" y="70" width="334" height="527"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mleo@outlook.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZH7-AJ-xJ8">
-                                <rect key="frame" x="113" y="607" width="148" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdJ-3A-CpY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-66-gA9">
+                                        <rect key="frame" x="20" y="50" width="335" height="547"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mleo@outlook.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBv-un-e3i">
+                                        <rect key="frame" x="20" y="607" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LO2-66-gA9" firstAttribute="leading" secondItem="hdJ-3A-CpY" secondAttribute="leading" constant="20" id="3Qp-9X-jSx"/>
+                                    <constraint firstItem="LO2-66-gA9" firstAttribute="centerY" secondItem="hdJ-3A-CpY" secondAttribute="centerY" id="9tS-Of-zyh"/>
+                                    <constraint firstItem="LO2-66-gA9" firstAttribute="centerX" secondItem="hdJ-3A-CpY" secondAttribute="centerX" id="CLK-Yd-Yfe"/>
+                                    <constraint firstAttribute="trailing" secondItem="wBv-un-e3i" secondAttribute="trailing" constant="20" id="KoR-9g-Ucv"/>
+                                    <constraint firstItem="wBv-un-e3i" firstAttribute="top" secondItem="LO2-66-gA9" secondAttribute="bottom" constant="10" id="cTh-fi-rrl"/>
+                                    <constraint firstItem="wBv-un-e3i" firstAttribute="centerX" secondItem="hdJ-3A-CpY" secondAttribute="centerX" id="dCw-V6-ZHY"/>
+                                    <constraint firstItem="LO2-66-gA9" firstAttribute="top" secondItem="hdJ-3A-CpY" secondAttribute="top" constant="50" id="ixF-mP-dHa"/>
+                                    <constraint firstItem="wBv-un-e3i" firstAttribute="leading" secondItem="hdJ-3A-CpY" secondAttribute="leading" constant="20" id="nWx-hy-wVr"/>
+                                    <constraint firstAttribute="bottom" secondItem="wBv-un-e3i" secondAttribute="bottom" constant="10" id="xTR-zW-vtF"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LO2-66-gA9" firstAttribute="leading" secondItem="cPS-Ug-wF3" secondAttribute="leading" constant="20" id="2zy-Ca-IIU"/>
-                            <constraint firstItem="LO2-66-gA9" firstAttribute="top" secondItem="cPS-Ug-wF3" secondAttribute="top" constant="50" id="57N-7q-qC3"/>
-                            <constraint firstItem="LO2-66-gA9" firstAttribute="centerX" secondItem="NvJ-MB-A97" secondAttribute="centerX" id="9tP-Kc-TRp"/>
-                            <constraint firstItem="ZH7-AJ-xJ8" firstAttribute="top" secondItem="LO2-66-gA9" secondAttribute="bottom" constant="10" id="bZb-oh-nbm"/>
-                            <constraint firstItem="LO2-66-gA9" firstAttribute="centerY" secondItem="NvJ-MB-A97" secondAttribute="centerY" id="ba2-LH-gFr"/>
-                            <constraint firstItem="ZH7-AJ-xJ8" firstAttribute="centerX" secondItem="NvJ-MB-A97" secondAttribute="centerX" id="k8i-fk-mhl"/>
+                            <constraint firstItem="hdJ-3A-CpY" firstAttribute="bottom" secondItem="cPS-Ug-wF3" secondAttribute="bottom" id="EZ9-dx-LoW"/>
+                            <constraint firstItem="hdJ-3A-CpY" firstAttribute="trailing" secondItem="cPS-Ug-wF3" secondAttribute="trailing" id="iQs-AC-bWi"/>
+                            <constraint firstItem="hdJ-3A-CpY" firstAttribute="top" secondItem="cPS-Ug-wF3" secondAttribute="top" id="ueu-rY-1B4"/>
+                            <constraint firstItem="hdJ-3A-CpY" firstAttribute="leading" secondItem="cPS-Ug-wF3" secondAttribute="leading" id="vc2-OR-OAn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cPS-Ug-wF3"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="LO2-66-gA9" id="ZPN-TJ-0JA"/>
+                        <outlet property="scrollView" destination="hdJ-3A-CpY" id="H2M-gb-MRp"/>
+                        <outlet property="textField" destination="wBv-un-e3i" id="mIP-IT-HR8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wx1-DS-WaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="82"/>
+            <point key="canvasLocation" x="-114.40000000000001" y="81.409295352323838"/>
         </scene>
     </scenes>
     <resources>
