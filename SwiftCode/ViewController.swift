@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 
 
@@ -82,8 +83,26 @@ class ViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textField.delegate = self
+        sendLoaclNotification()
     }
 
+    
+    func sendLoaclNotification(){
+        let notificationId = "notificationId"
+        let content = UNMutableNotificationContent()
+        content.title = "motification"
+        content.body = "message"
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: notificationId, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if error == nil {
+                print("notification send success")
+            }
+        }
+
+    }
+    
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

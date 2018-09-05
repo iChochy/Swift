@@ -7,15 +7,36 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-                
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: .alert ,completionHandler: { (setting, error) in
+            if setting {
+                center.delegate = self
+                print("开启")
+            }else{
+                print("关闭")
+            }
+        })
+        
         return true
+    }
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print(response)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let message = notification.request.content.body
+        print(message)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
