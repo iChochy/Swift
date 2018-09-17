@@ -8,19 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		7A66AE1E21338E0B00BEEB6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66AE1D21338E0B00BEEB6F /* AppDelegate.swift */; };
-		7A66AE2021338E0B00BEEB6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66AE1F21338E0B00BEEB6F /* ViewController.swift */; };
+		7A66AE2021338E0B00BEEB6F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66AE1F21338E0B00BEEB6F /* NavigationController.swift */; };
 		7A66AE2521338E0D00BEEB6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A66AE2421338E0D00BEEB6F /* Assets.xcassets */; };
 		7A66AE2821338E0D00BEEB6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A66AE2621338E0D00BEEB6F /* LaunchScreen.storyboard */; };
+		7A9CF8F82148F74800CEE0D9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */; };
+		7A9CF8FA214912B100CEE0D9 /* OneTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */; };
+		7A9CF8FC214912C400CEE0D9 /* TwoTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */; };
+		7ABF9B03214B9F1B0089E475 /* GestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF9B02214B9F1B0089E475 /* GestureRecognizerViewController.swift */; };
+		7AFAC6572146232A002544FF /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFAC6562146232A002544FF /* Storyboard.storyboard */; };
+		7AFAC65921479124002544FF /* NewNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFAC65821479124002544FF /* NewNavigationViewController.swift */; };
+		7AFAC65B214794C2002544FF /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFAC65A214794C2002544FF /* DefaultViewController.swift */; };
+		7AFAC65F2147BBB2002544FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFAC65E2147BBB2002544FF /* ViewController.swift */; };
 		7AFCD34E2137D316008F5F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFCD34C2137D316008F5F51 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A66AE1A21338E0B00BEEB6F /* SwiftCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A66AE1D21338E0B00BEEB6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A66AE1F21338E0B00BEEB6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A66AE1F21338E0B00BEEB6F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		7A66AE2421338E0D00BEEB6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A66AE2721338E0D00BEEB6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A66AE2921338E0D00BEEB6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTabBarViewController.swift; sourceTree = "<group>"; };
+		7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTabBarViewController.swift; sourceTree = "<group>"; };
+		7ABF9B02214B9F1B0089E475 /* GestureRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizerViewController.swift; sourceTree = "<group>"; };
+		7AFAC6562146232A002544FF /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		7AFAC65821479124002544FF /* NewNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNavigationViewController.swift; sourceTree = "<group>"; };
+		7AFAC65A214794C2002544FF /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		7AFAC65E2147BBB2002544FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7AFCD34D2137D316008F5F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,13 +71,53 @@
 			isa = PBXGroup;
 			children = (
 				7A66AE1D21338E0B00BEEB6F /* AppDelegate.swift */,
-				7A66AE1F21338E0B00BEEB6F /* ViewController.swift */,
+				7AFAC65E2147BBB2002544FF /* ViewController.swift */,
+				7ABF9B01214B9EFD0089E475 /* GestureRecognizer */,
+				7AFAC6612148EA33002544FF /* Default */,
+				7AFAC6602148EA05002544FF /* Navigation */,
+				7A9CF8F62148F72700CEE0D9 /* TabBar */,
 				7A66AE2421338E0D00BEEB6F /* Assets.xcassets */,
 				7AFCD34C2137D316008F5F51 /* Main.storyboard */,
+				7AFAC6562146232A002544FF /* Storyboard.storyboard */,
 				7A66AE2621338E0D00BEEB6F /* LaunchScreen.storyboard */,
 				7A66AE2921338E0D00BEEB6F /* Info.plist */,
 			);
 			path = SwiftCode;
+			sourceTree = "<group>";
+		};
+		7A9CF8F62148F72700CEE0D9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */,
+				7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */,
+				7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		7ABF9B01214B9EFD0089E475 /* GestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				7ABF9B02214B9F1B0089E475 /* GestureRecognizerViewController.swift */,
+			);
+			path = GestureRecognizer;
+			sourceTree = "<group>";
+		};
+		7AFAC6602148EA05002544FF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7A66AE1F21338E0B00BEEB6F /* NavigationController.swift */,
+				7AFAC65821479124002544FF /* NewNavigationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		7AFAC6612148EA33002544FF /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				7AFAC65A214794C2002544FF /* DefaultViewController.swift */,
+			);
+			path = Default;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A66AE2C21338E0D00BEEB6F /* Build configuration list for PBXNativeTarget "SwiftCode" */;
 			buildPhases = (
+				FD9822EF3FF80461D7BAD76D /* [CP] Check Pods Manifest.lock */,
 				7A66AE1621338E0B00BEEB6F /* Sources */,
 				7A66AE1721338E0B00BEEB6F /* Frameworks */,
 				7A66AE1821338E0B00BEEB6F /* Resources */,
+				67113D4C84095E12BFDA3D37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AFCD34E2137D316008F5F51 /* Main.storyboard in Resources */,
+				7AFAC6572146232A002544FF /* Storyboard.storyboard in Resources */,
 				7A66AE2821338E0D00BEEB6F /* LaunchScreen.storyboard in Resources */,
 				7A66AE2521338E0D00BEEB6F /* Assets.xcassets in Resources */,
 			);
@@ -130,13 +189,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		67113D4C84095E12BFDA3D37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCode/Pods-SwiftCode-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCode/Pods-SwiftCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD9822EF3FF80461D7BAD76D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftCode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A66AE1621338E0B00BEEB6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A66AE2021338E0B00BEEB6F /* ViewController.swift in Sources */,
+				7AFAC65F2147BBB2002544FF /* ViewController.swift in Sources */,
+				7A9CF8FA214912B100CEE0D9 /* OneTabBarViewController.swift in Sources */,
+				7AFAC65921479124002544FF /* NewNavigationViewController.swift in Sources */,
+				7A66AE2021338E0B00BEEB6F /* NavigationController.swift in Sources */,
 				7A66AE1E21338E0B00BEEB6F /* AppDelegate.swift in Sources */,
+				7A9CF8FC214912C400CEE0D9 /* TwoTabBarViewController.swift in Sources */,
+				7A9CF8F82148F74800CEE0D9 /* TabBarViewController.swift in Sources */,
+				7ABF9B03214B9F1B0089E475 /* GestureRecognizerViewController.swift in Sources */,
+				7AFAC65B214794C2002544FF /* DefaultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +427,7 @@
 				7A66AE2B21338E0D00BEEB6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		7A66AE2C21338E0D00BEEB6F /* Build configuration list for PBXNativeTarget "SwiftCode" */ = {
 			isa = XCConfigurationList;
@@ -331,7 +436,7 @@
 				7A66AE2E21338E0D00BEEB6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
