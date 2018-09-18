@@ -13,15 +13,12 @@ class NewNavigationViewController: UIViewController {
     var button:UIButton!
     
     override func loadView() {
-        self.title = "New"
-        self.view = UIView()
-        self.view.backgroundColor = UIColor.white
-        addNavigationBar()
+
     }
     
     
     func addNavigationBar(){
-        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.stop, target: self, action: #selector(closeView))
+        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(closeView))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
@@ -50,7 +47,11 @@ class NewNavigationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = "New"
+        self.view = UIView()
+        self.view.backgroundColor = UIColor.white
+        addNavigationBar()
         // Do any additional setup after loading the view.
     }
 

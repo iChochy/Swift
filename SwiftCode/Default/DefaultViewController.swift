@@ -14,13 +14,6 @@ class DefaultViewController: UIViewController {
     
     var loadValue:String!
     
-    
-    override func loadView() {
-        self.title = "WEB"
-        self.view = UIView()
-        self.view.backgroundColor = UIColor.white
-        addButton()
-    }
 
     func addButton(){
         button = UIButton(type: .system)
@@ -44,10 +37,12 @@ class DefaultViewController: UIViewController {
     }
     
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.view.backgroundColor = UIColor.white
+        addButton()
+        
         print(loadValue)
         // Do any additional setup after loading the view.
     }

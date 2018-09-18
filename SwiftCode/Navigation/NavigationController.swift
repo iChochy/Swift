@@ -12,20 +12,12 @@ class NavigationController: UIViewController {
 
     
     var button:UIButton!
-    
-    override func loadView() {
-        self.view = UIView()
-        self.title = "Navigation"
-        self.view.backgroundColor = UIColor.white
-        addNavigationBar()
-        addButton()
-    }
-
-    
+        
     func addNavigationBar(){
-        let leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(closeView))
-        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target: self, action: #selector(openView))
-        self.navigationItem.leftBarButtonItem = leftBarButtonItem
+//        let leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(closeView))
+//        self.navigationItem.leftBarButtonItem = leftBarButtonItem
+        
+        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target: self, action: #selector(openView))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
@@ -57,7 +49,11 @@ class NavigationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = "Navigation"
+        self.view.backgroundColor = UIColor.white
+        addNavigationBar()
+        addButton()
     }
 
     

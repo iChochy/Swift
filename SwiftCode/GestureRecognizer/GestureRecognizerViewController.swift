@@ -15,7 +15,7 @@ class GestureRecognizerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "滑动"
         addMoveView()
     }
     

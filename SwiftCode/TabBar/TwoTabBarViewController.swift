@@ -13,14 +13,6 @@ class TwoTabBarViewController: UIViewController {
     
     var button:UIButton!
     
-    override func loadView() {
-        self.view = UIView()
-        self.title = "Navigation"
-        self.view.backgroundColor = UIColor.red
-        addButton()
-    }
-    
-    
     func addButton(){
         button = UIButton(type: .system)
         button.setTitle("Close", for: .normal)
@@ -45,6 +37,8 @@ class TwoTabBarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor.red
+        addButton()
         // Do any additional setup after loading the view.
     }
 

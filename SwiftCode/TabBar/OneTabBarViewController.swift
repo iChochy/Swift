@@ -13,14 +13,7 @@ class OneTabBarViewController: UIViewController {
     
     var button:UIButton!
     
-    override func loadView() {
-        self.view = UIView()
-        self.title = "Navigation"
-        self.view.backgroundColor = UIColor.blue
-        addButton()
-    }
-    
-    
+
     func addButton(){
         button = UIButton(type: .system)
         button.setTitle("Close", for: .normal)
@@ -44,7 +37,8 @@ class OneTabBarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "One"
+        self.view.backgroundColor = UIColor.blue
+        addButton()
         // Do any additional setup after loading the view.
     }
 

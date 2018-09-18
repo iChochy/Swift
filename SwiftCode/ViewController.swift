@@ -16,7 +16,8 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
         "UIViewController 跳转",
         "UINavigationController 跳转",
         "UITabBarController 跳转",
-        "UIGestureRecognizer 手势"
+        "UIGestureRecognizer 手势",
+        "UserDefaults 存储"
     ]
     
     
@@ -24,7 +25,25 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
     var button:UIButton!
     
     
-    
+    @objc func touchButton(){
+        let row = picker.selectedRow(inComponent: 0)
+        switch row {
+        case 0:
+            let defaultView = DefaultViewController()
+            defaultView.loadValue = "default"
+            self.present(defaultView, animated: true, completion: nil)
+        case 1:
+            self.show(UINavigationController(rootViewController: NavigationController()), sender: nil)
+        case 2:
+            self.show(UINavigationController(rootViewController:TabBarViewController()), sender: nil)
+        case 3:
+            self.show(GestureRecognizerViewController(),sender: nil)
+        case 4:
+            self.show(UserDefaultsViewController(), sender: nil)
+        default:
+            print("default")
+        }
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -37,16 +56,6 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
         return pickerData[row]
     }
 
-    
-    override func loadView() {
-        self.view = UIView()
-        view.backgroundColor = UIColor.white
-        addPickerView()
-        addButton()
-    }
-    
-    
-    
     func addPickerView(){
         picker = UIPickerView()
         picker.center = view.center
@@ -74,23 +83,7 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
     }
     
 
-    @objc func touchButton(){
-        let row = picker.selectedRow(inComponent: 0)
-        switch row {
-        case 0:
-            let defaultView = DefaultViewController()
-            defaultView.loadValue = "default"
-            self.present(defaultView, animated: true, completion: nil)
-        case 1:
-            self.present(UINavigationController(rootViewController: NavigationController()), animated: true, completion: nil)
-        case 2:
-            self.present(TabBarViewController(), animated: true, completion: nil)
-        case 3:
-            self.present(GestureRecognizerViewController(), animated: true, completion: nil)
-        default:
-            print("default")
-        }
-    }
+
     
     
     func addButtonConstraint(child:UIView,parent:UIView){
@@ -104,6 +97,11 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "首页"
+        self.view.backgroundColor = UIColor.white
+        addPickerView()
+        addButton()
         // Do any additional setup after loading the view.
     }
 
