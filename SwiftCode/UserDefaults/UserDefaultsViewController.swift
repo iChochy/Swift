@@ -47,7 +47,7 @@ class UserDefaultsViewController: UIViewController {
         }
         
         view.addSubview(textField)
-        addConstraints(child: textField, layoutGuide: view.safeAreaLayoutGuide)
+        addConstraints(child: textField, layoutGuide: self.view.safeAreaLayoutGuide)
     }
     
     

@@ -17,7 +17,8 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
         "UINavigationController 跳转",
         "UITabBarController 跳转",
         "UIGestureRecognizer 手势",
-        "UserDefaults 存储"
+        "UserDefaults 存储",
+        "SQLite 存储"
     ]
     
     
@@ -40,6 +41,8 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
             self.show(GestureRecognizerViewController(),sender: nil)
         case 4:
             self.show(UserDefaultsViewController(), sender: nil)
+        case 5:
+            self.show(SQLiteViewController(), sender: nil)
         default:
             print("default")
         }
