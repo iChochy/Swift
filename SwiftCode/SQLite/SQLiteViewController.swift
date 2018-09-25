@@ -57,6 +57,8 @@ class SQLiteViewController: UIViewController {
         
         sqlite3_finalize(statement)
             
+        let _ = dbConnect.delete(tableName: tableName, param: nil)
+            
     }
         
 }

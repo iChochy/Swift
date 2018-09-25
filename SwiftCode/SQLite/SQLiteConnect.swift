@@ -43,7 +43,7 @@ class SQLiteConnect {
         var statement:OpaquePointer?
         let sql = "insert into \(tableName) (\(row.keys.joined(separator: ","))) values (\(row.values.joined(separator: ",")))"
         
-        print("update sql: \(sql)")
+        print("insert sql: \(sql)")
         
         if sqlite3_prepare_v2(db, sql.cString(using: .utf8), -1, &statement, nil) == SQLITE_OK {
             if sqlite3_step(statement) == SQLITE_DONE{
@@ -65,7 +65,7 @@ class SQLiteConnect {
             sql+="order by \(orderSQL)"
         }
         
-        print("order sql: \(sql)")
+        print("fetch sql: \(sql)")
         
         sqlite3_prepare_v2(db, sql.cString(using: .utf8), -1, &statement, nil)
         return statement!
@@ -101,6 +101,9 @@ class SQLiteConnect {
         if let paramSQL = param {
             sql += "where \(paramSQL)"
         }
+        
+        print("delete sql:\(sql)")
+        
         if sqlite3_prepare_v2(db, sql.cString(using: .utf8), -1, &statement, nil) == SQLITE_OK {
             if sqlite3_step(statement) == SQLITE_DONE {
                 return true
