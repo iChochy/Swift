@@ -13,13 +13,14 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
     
     let pickerData =
         [
-        "UIViewController 跳转",
-        "UINavigationController 跳转",
-        "UITabBarController 跳转",
-        "UIGestureRecognizer 手势",
-        "UserDefaults 存储",
-        "SQLite 存储",
-        "CoreData 存储"
+        "UIKit",
+        "UIViewController",
+        "UINavigationController",
+        "UITabBarController",
+        "UIGestureRecognizer",
+        "UserDefaults",
+        "SQLite",
+        "CoreData"
     ]
     
     
@@ -29,23 +30,28 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
     
     @objc func touchButton(){
         let row = picker.selectedRow(inComponent: 0)
-        switch row {
-        case 0:
+        let value = pickerData[row];
+        switch value {
+        case "UIViewController":
             let defaultView = DefaultViewController()
             defaultView.loadValue = "default"
             self.present(defaultView, animated: true, completion: nil)
-        case 1:
+        case "UINavigationController":
             self.show(UINavigationController(rootViewController: NavigationController()), sender: nil)
-        case 2:
+        case "UITabBarController":
             self.show(UINavigationController(rootViewController:TabBarViewController()), sender: nil)
-        case 3:
+        case "UIGestureRecognizer":
             self.show(GestureRecognizerViewController(),sender: nil)
-        case 4:
+        case "UserDefaults":
             self.show(UserDefaultsViewController(), sender: nil)
-        case 5:
+        case "SQLite":
             self.show(SQLiteViewController(), sender: nil)
-        case 6:
+        case "CoreData":
             self.show(CoreDataViewController(), sender: nil)
+        case "UIKit":
+            self.show(UIKitViewController(), sender: nil)
+            
+            
         default:
             print("default")
         }

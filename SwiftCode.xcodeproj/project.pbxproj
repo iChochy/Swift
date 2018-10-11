@@ -14,6 +14,8 @@
 		7A7DC5E62154D7CD00A97376 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5E52154D7CD00A97376 /* CoreDataViewController.swift */; };
 		7A7DC5EB2154E00800A97376 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5E92154E00700A97376 /* CoreData.xcdatamodeld */; };
 		7A7DC5ED2154E3F800A97376 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5EC2154E3F800A97376 /* CoreDataStack.swift */; };
+		7A7DC5F1215A33A800A97376 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */; };
+		7A7FA378216C499400E3FDD6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */; };
 		7A9CF8F82148F74800CEE0D9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */; };
 		7A9CF8FA214912B100CEE0D9 /* OneTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */; };
 		7A9CF8FC214912C400CEE0D9 /* TwoTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */; };
@@ -39,6 +41,8 @@
 		7A7DC5E52154D7CD00A97376 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		7A7DC5EA2154E00700A97376 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		7A7DC5EC2154E3F800A97376 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
+		7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTabBarViewController.swift; sourceTree = "<group>"; };
 		7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTabBarViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		7A66AE1C21338E0B00BEEB6F /* SwiftCode */ = {
 			isa = PBXGroup;
 			children = (
+				7A7DC5EF215A336400A97376 /* UIKit */,
 				7A7DC5DD2154CF0800A97376 /* CoreData */,
 				7AD3B43221522E9300F8A0F4 /* SQLite */,
 				7ABF9B04214F86750089E475 /* UserDefaults */,
@@ -102,7 +107,6 @@
 				7AFAC6562146232A002544FF /* Storyboard.storyboard */,
 				7A66AE2621338E0D00BEEB6F /* LaunchScreen.storyboard */,
 				7A66AE2921338E0D00BEEB6F /* Info.plist */,
-				7AD3B42D21522B1A00F8A0F4 /* BridgeHeader.h */,
 			);
 			path = SwiftCode;
 			sourceTree = "<group>";
@@ -115,6 +119,15 @@
 				7A7DC5EC2154E3F800A97376 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7A7DC5EF215A336400A97376 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */,
+				7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		7A9CF8F62148F72700CEE0D9 /* TabBar */ = {
@@ -155,6 +168,7 @@
 		7AD3B43221522E9300F8A0F4 /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
+				7AD3B42D21522B1A00F8A0F4 /* BridgeHeader.h */,
 				7AD3B43321522F3300F8A0F4 /* SQLiteViewController.swift */,
 				7AD3B453215237D300F8A0F4 /* SQLiteConnect.swift */,
 			);
@@ -250,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7FA378216C499400E3FDD6 /* CustomTableViewCell.swift in Sources */,
 				7AFAC65F2147BBB2002544FF /* ViewController.swift in Sources */,
 				7A9CF8FA214912B100CEE0D9 /* OneTabBarViewController.swift in Sources */,
 				7A7DC5EB2154E00800A97376 /* CoreData.xcdatamodeld in Sources */,
@@ -265,6 +280,7 @@
 				7ABF9B03214B9F1B0089E475 /* GestureRecognizerViewController.swift in Sources */,
 				7AD3B454215237D300F8A0F4 /* SQLiteConnect.swift in Sources */,
 				7A7DC5ED2154E3F800A97376 /* CoreDataStack.swift in Sources */,
+				7A7DC5F1215A33A800A97376 /* UIKitViewController.swift in Sources */,
 				7AFAC65B214794C2002544FF /* DefaultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +434,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichochy.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = SwiftCode/BridgeHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = SwiftCode/SQLite/BridgeHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -437,7 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichochy.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = SwiftCode/BridgeHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = SwiftCode/SQLite/BridgeHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
