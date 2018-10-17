@@ -45,18 +45,18 @@ class CustomTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate(
         [
             detailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            detailLabel.bottomAnchor.constraint(equalTo: dateLabel.topAnchor, constant: 10),
             contentView.trailingAnchor.constraint(equalTo: detailLabel.trailingAnchor, constant: 0),
-        detailLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            detailLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
 
         ])
     }
     
     func addDateConstraints(){
+//        dateLabel.font.withSize(20)
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(
             [
-                dateLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 10),
+                dateLabel.topAnchor.constraint(equalTo: detailLabel.bottomAnchor, constant: 10),                contentView.bottomAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 0)
                 
             ]
         )

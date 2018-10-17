@@ -15,6 +15,8 @@ class SQLiteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
+
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let sqlitePath = urls.first!.appendingPathComponent("sqlite.db").absoluteString
         print("db path: \(sqlitePath)")

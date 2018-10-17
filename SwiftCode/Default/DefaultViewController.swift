@@ -33,13 +33,14 @@ class DefaultViewController: UIViewController {
 
     
     @objc func closeView(){
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
+        
+//        self.dismiss(animated: true, completion: nil)
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.backgroundColor = UIColor.white
         addButton()
         

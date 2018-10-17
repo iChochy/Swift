@@ -14,11 +14,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
+    var tableViewGroups:[TableViewGroup]? {
+        get{
+            if let path = Bundle.main.path(forResource: "SwiftCode", ofType: "plist") {
+                let data = FileManager.default.contents(atPath: path)
+                typealias Settings = [TableViewGroup]
+                var groups:[TableViewGroup]?
+                let decoder = PropertyListDecoder()
+                do{
+                    groups =  try decoder.decode(Settings.self, from: data!)
+                    return groups
+                }catch{
+                    print(error)
+                }
+            }
+            print("load plist data")
+            return nil
+        }
+        
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
-        self.window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        let rootViewController = MainViewController()
+        rootViewController.tableViewGroups = tableViewGroups
+        self.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         self.window?.makeKeyAndVisible()
         
         return true

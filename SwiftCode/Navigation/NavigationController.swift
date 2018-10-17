@@ -49,9 +49,8 @@ class NavigationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Navigation"
         self.view.backgroundColor = UIColor.white
+        self.title = "Navigation"
         addNavigationBar()
         addButton()
     }

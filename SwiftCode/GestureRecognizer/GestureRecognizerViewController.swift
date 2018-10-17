@@ -15,7 +15,8 @@ class GestureRecognizerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "滑动"
+        self.view.backgroundColor = UIColor.white
+
         addMoveView()
     }
     

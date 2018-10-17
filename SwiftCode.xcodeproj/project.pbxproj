@@ -14,12 +14,13 @@
 		7A7DC5E62154D7CD00A97376 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5E52154D7CD00A97376 /* CoreDataViewController.swift */; };
 		7A7DC5EB2154E00800A97376 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5E92154E00700A97376 /* CoreData.xcdatamodeld */; };
 		7A7DC5ED2154E3F800A97376 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5EC2154E3F800A97376 /* CoreDataStack.swift */; };
-		7A7DC5F1215A33A800A97376 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */; };
+		7A7DC5F1215A33A800A97376 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5F0215A33A800A97376 /* MainViewController.swift */; };
 		7A7FA378216C499400E3FDD6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */; };
 		7A7FA37A21703F5400E3FDD6 /* TableViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA37921703F5400E3FDD6 /* TableViewData.swift */; };
 		7A7FA37C2170402400E3FDD6 /* TableViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA37B2170402400E3FDD6 /* TableViewDetail.swift */; };
 		7A7FA3C121746E1200E3FDD6 /* SwiftCode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7FA3C021746E1200E3FDD6 /* SwiftCode.plist */; };
 		7A7FA3C32174735A00E3FDD6 /* TableViewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA3C22174735A00E3FDD6 /* TableViewGroup.swift */; };
+		7A7FA3CC2176EA4500E3FDD6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA3CB2176EA4500E3FDD6 /* Utils.swift */; };
 		7A9CF8F82148F74800CEE0D9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */; };
 		7A9CF8FA214912B100CEE0D9 /* OneTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */; };
 		7A9CF8FC214912C400CEE0D9 /* TwoTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */; };
@@ -45,12 +46,13 @@
 		7A7DC5E52154D7CD00A97376 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		7A7DC5EA2154E00700A97376 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		7A7DC5EC2154E3F800A97376 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
+		7A7DC5F0215A33A800A97376 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7A7FA37921703F5400E3FDD6 /* TableViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewData.swift; sourceTree = "<group>"; };
 		7A7FA37B2170402400E3FDD6 /* TableViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDetail.swift; sourceTree = "<group>"; };
 		7A7FA3C021746E1200E3FDD6 /* SwiftCode.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SwiftCode.plist; sourceTree = "<group>"; };
 		7A7FA3C22174735A00E3FDD6 /* TableViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewGroup.swift; sourceTree = "<group>"; };
+		7A7FA3CB2176EA4500E3FDD6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTabBarViewController.swift; sourceTree = "<group>"; };
 		7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTabBarViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +102,8 @@
 		7A66AE1C21338E0B00BEEB6F /* SwiftCode */ = {
 			isa = PBXGroup;
 			children = (
-				7A7DC5EF215A336400A97376 /* UIKit */,
+				7A66AE1D21338E0B00BEEB6F /* AppDelegate.swift */,
+				7A7DC5EF215A336400A97376 /* Main */,
 				7A7DC5DD2154CF0800A97376 /* CoreData */,
 				7AD3B43221522E9300F8A0F4 /* SQLite */,
 				7ABF9B04214F86750089E475 /* UserDefaults */,
@@ -108,8 +111,8 @@
 				7AFAC6612148EA33002544FF /* Default */,
 				7AFAC6602148EA05002544FF /* Navigation */,
 				7A9CF8F62148F72700CEE0D9 /* TabBar */,
+				7A7FA3CA2176E9C300E3FDD6 /* Utils */,
 				7AFAC65E2147BBB2002544FF /* ViewController.swift */,
-				7A66AE1D21338E0B00BEEB6F /* AppDelegate.swift */,
 				7A66AE2421338E0D00BEEB6F /* Assets.xcassets */,
 				7AFCD34C2137D316008F5F51 /* Main.storyboard */,
 				7AFAC6562146232A002544FF /* Storyboard.storyboard */,
@@ -130,16 +133,24 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		7A7DC5EF215A336400A97376 /* UIKit */ = {
+		7A7DC5EF215A336400A97376 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */,
+				7A7DC5F0215A33A800A97376 /* MainViewController.swift */,
 				7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */,
 				7A7FA3C22174735A00E3FDD6 /* TableViewGroup.swift */,
 				7A7FA37B2170402400E3FDD6 /* TableViewDetail.swift */,
 				7A7FA3C021746E1200E3FDD6 /* SwiftCode.plist */,
 			);
-			path = UIKit;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7A7FA3CA2176E9C300E3FDD6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7A7FA3CB2176EA4500E3FDD6 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7A9CF8F62148F72700CEE0D9 /* TabBar */ = {
@@ -284,6 +295,7 @@
 				7AFAC65921479124002544FF /* NewNavigationViewController.swift in Sources */,
 				7ABF9B08214F87490089E475 /* DisplayViewController.swift in Sources */,
 				7A7FA3C32174735A00E3FDD6 /* TableViewGroup.swift in Sources */,
+				7A7FA3CC2176EA4500E3FDD6 /* Utils.swift in Sources */,
 				7A66AE2021338E0B00BEEB6F /* NavigationController.swift in Sources */,
 				7A66AE1E21338E0B00BEEB6F /* AppDelegate.swift in Sources */,
 				7A7DC5E62154D7CD00A97376 /* CoreDataViewController.swift in Sources */,
@@ -295,7 +307,7 @@
 				7ABF9B03214B9F1B0089E475 /* GestureRecognizerViewController.swift in Sources */,
 				7AD3B454215237D300F8A0F4 /* SQLiteConnect.swift in Sources */,
 				7A7DC5ED2154E3F800A97376 /* CoreDataStack.swift in Sources */,
-				7A7DC5F1215A33A800A97376 /* UIKitViewController.swift in Sources */,
+				7A7DC5F1215A33A800A97376 /* MainViewController.swift in Sources */,
 				7A7FA37A21703F5400E3FDD6 /* TableViewData.swift in Sources */,
 				7AFAC65B214794C2002544FF /* DefaultViewController.swift in Sources */,
 			);

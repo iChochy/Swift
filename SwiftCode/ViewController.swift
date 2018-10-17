@@ -49,7 +49,7 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
         case "CoreData":
             self.show(CoreDataViewController(), sender: nil)
         case "UIKit":
-            self.show(UIKitViewController.init(), sender: nil)
+            self.show(MainViewController.init(), sender: nil)
             
             
         default:
@@ -109,8 +109,6 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "首页"
         self.view.backgroundColor = UIColor.white
         addPickerView()
         addButton()

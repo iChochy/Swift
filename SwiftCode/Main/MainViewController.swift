@@ -8,27 +8,43 @@
 
 import UIKit
 
-class UIKitViewController: UITableViewController {
+class MainViewController: UITableViewController {
     
-    var tableViewGroups:[TableViewGroup]? {
-        get{
-            if let path = Bundle.main.path(forResource: "SwiftCode", ofType: "plist") {
-                let data = FileManager.default.contents(atPath: path)
-                typealias Settings = [TableViewGroup]
-                var groups:[TableViewGroup]?
-                let decoder = PropertyListDecoder()
-                do{
-                   groups =  try decoder.decode(Settings.self, from: data!)
-                    return groups
-                }catch{
-                    print(error)
-                }
-            }
-            return nil
-        }
-        
+    var tableViewGroups:[TableViewGroup]?
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detail = tableViewGroups![indexPath.section].details[indexPath.row]
+        let viewController = viewControllerFactory(key: detail.key)
+        viewController.title = detail.title
+        self.show(viewController, sender: nil)
+//         self.present(defaultView, animated: true, completion: nil)
     }
     
+    
+    
+    
+    func viewControllerFactory(key:String) -> UIViewController {
+        var viewController:UIViewController
+        switch key {
+        case "UIViewController":
+            viewController = DefaultViewController()
+        case "UINavigationController":
+            viewController = UINavigationController(rootViewController: NavigationController())
+        case "UITabBarController":
+            viewController = TabBarViewController()
+        case "UIGestureRecognizer":
+            viewController = GestureRecognizerViewController()
+        case "UserDefaults":
+            viewController = UserDefaultsViewController()
+        case "SQLite":
+            viewController = SQLiteViewController()
+        case "CoreData":
+            viewController = CoreDataViewController()
+        default:
+            viewController = DefaultViewController()
+        }
+        return viewController
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewGroups![section].details.count
@@ -41,46 +57,21 @@ class UIKitViewController: UITableViewController {
             cell = CustomTableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         }
         cell!.accessoryType = .detailButton
-        cell!.titleLabel.numberOfLines = 0
+        cell!.detailLabel.numberOfLines = 0
 
         let group = tableViewGroups![indexPath.section]
         let details = group.details
         let detail = details[indexPath.row]
         let createDate = detail.createDate
-        let image = UIImage(named: "pay")!
+        let defaultImage = UIImage(named: "Image")
+        let image = UIImage(named: detail.imageName)
         
         cell!.titleLabel.text = detail.title
         cell!.detailLabel.text = detail.detail
-        
-        cell!.dateLabel.text = dateFormatter.string(from: createDate)
-       
-        cell!.customImageView.image = imageResetSize(image: image,size:100)
+        cell!.dateLabel.text = Utils.dateFormatter.string(from: createDate)
+        cell!.customImageView.image = Utils.imageResetSize(image: image ?? defaultImage!,size:100)
         return cell!
     }
-    
-    let dateFormatter:DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        return dateFormatter
-    }()
-    
-    
-    func imageResetSize(image:UIImage,size:CGFloat) -> UIImage{
-        var scale:CGFloat
-        if image.size.width > image.size.height {
-            scale = image.size.width/size
-        }else{
-            scale = image.size.height/size
-        }
-        let itemSize = CGSize.init(width: image.size.width/scale, height: image.size.height/scale)
-        UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.main.scale);
-        let imageRect = CGRect.init(origin: CGPoint.zero, size: itemSize)
-        image.draw(in: imageRect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        return newImage!
-    }
-    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return tableViewGroups![section].groupName
@@ -92,6 +83,7 @@ class UIKitViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "功能列表"
         addTableView()
         // Do any additional setup after loading the view.
     }

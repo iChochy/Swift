@@ -12,9 +12,6 @@ class TableViewGroup: Codable {
     let groupName:String
     let details:[TableViewDetail]
     
-    init(groupName:String,details:[TableViewDetail]) {
-        self.groupName = groupName
-        self.details = details
-    }
+
     
 }

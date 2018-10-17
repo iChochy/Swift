@@ -32,6 +32,7 @@ class OneTabBarViewController: UIViewController {
     
     
     @objc func closeView(){
+        self.navigationController?.popToRootViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     

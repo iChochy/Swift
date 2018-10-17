@@ -9,17 +9,11 @@
 import UIKit
 
 class TableViewDetail: Codable {
-    
+    let key:String
     let title:String
     let detail:String
     let imageName:String
     let createDate:Date
     
-    init(title:String,detail:String,imageName:String,createDate:Date) {
-        self.title = title
-        self.detail = detail
-        self.imageName = imageName
-        self.createDate = createDate
-    }
 
 }
