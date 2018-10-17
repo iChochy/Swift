@@ -10,11 +10,28 @@ import UIKit
 
 class UIKitViewController: UITableViewController {
     
-    let tableViewData = [["花","草","树"],["老虎","狮子","兔子","长颈鹿","鱼"]]
+    var tableViewGroups:[TableViewGroup]? {
+        get{
+            if let path = Bundle.main.path(forResource: "SwiftCode", ofType: "plist") {
+                let data = FileManager.default.contents(atPath: path)
+                typealias Settings = [TableViewGroup]
+                var groups:[TableViewGroup]?
+                let decoder = PropertyListDecoder()
+                do{
+                   groups =  try decoder.decode(Settings.self, from: data!)
+                    return groups
+                }catch{
+                    print(error)
+                }
+            }
+            return nil
+        }
+        
+    }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewData[section].count
+        return tableViewGroups![section].details.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -25,14 +42,28 @@ class UIKitViewController: UITableViewController {
         }
         cell!.accessoryType = .detailButton
         cell!.titleLabel.numberOfLines = 0
-        cell!.titleLabel.text = tableViewData[indexPath.section][indexPath.row]
-        cell!.dateLabel.text = "date"
-        cell!.detailLabel.text = "中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文END"
-        let image = UIImage(named: "pay")!;
-        cell!.customImageView.image = imageResetSize(image: image,size:100)
+
+        let group = tableViewGroups![indexPath.section]
+        let details = group.details
+        let detail = details[indexPath.row]
+        let createDate = detail.createDate
+        let image = UIImage(named: "pay")!
         
+        cell!.titleLabel.text = detail.title
+        cell!.detailLabel.text = detail.detail
+        
+        cell!.dateLabel.text = dateFormatter.string(from: createDate)
+       
+        cell!.customImageView.image = imageResetSize(image: image,size:100)
         return cell!
     }
+    
+    let dateFormatter:DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        return dateFormatter
+    }()
+    
     
     func imageResetSize(image:UIImage,size:CGFloat) -> UIImage{
         var scale:CGFloat
@@ -52,11 +83,11 @@ class UIKitViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == 0 ? "植物":"动物"
+        return tableViewGroups![section].groupName
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewData.count
+        return tableViewGroups!.count
     }
 
     override func viewDidLoad() {

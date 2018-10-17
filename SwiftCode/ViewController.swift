@@ -49,7 +49,7 @@ class  ViewController: UIViewController,UIPickerViewDataSource ,UIPickerViewDele
         case "CoreData":
             self.show(CoreDataViewController(), sender: nil)
         case "UIKit":
-            self.show(UIKitViewController(), sender: nil)
+            self.show(UIKitViewController.init(), sender: nil)
             
             
         default:

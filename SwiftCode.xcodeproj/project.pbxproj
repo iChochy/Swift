@@ -16,6 +16,10 @@
 		7A7DC5ED2154E3F800A97376 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5EC2154E3F800A97376 /* CoreDataStack.swift */; };
 		7A7DC5F1215A33A800A97376 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */; };
 		7A7FA378216C499400E3FDD6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */; };
+		7A7FA37A21703F5400E3FDD6 /* TableViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA37921703F5400E3FDD6 /* TableViewData.swift */; };
+		7A7FA37C2170402400E3FDD6 /* TableViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA37B2170402400E3FDD6 /* TableViewDetail.swift */; };
+		7A7FA3C121746E1200E3FDD6 /* SwiftCode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7FA3C021746E1200E3FDD6 /* SwiftCode.plist */; };
+		7A7FA3C32174735A00E3FDD6 /* TableViewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7FA3C22174735A00E3FDD6 /* TableViewGroup.swift */; };
 		7A9CF8F82148F74800CEE0D9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */; };
 		7A9CF8FA214912B100CEE0D9 /* OneTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */; };
 		7A9CF8FC214912C400CEE0D9 /* TwoTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */; };
@@ -43,6 +47,10 @@
 		7A7DC5EC2154E3F800A97376 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
 		7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7A7FA37921703F5400E3FDD6 /* TableViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewData.swift; sourceTree = "<group>"; };
+		7A7FA37B2170402400E3FDD6 /* TableViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDetail.swift; sourceTree = "<group>"; };
+		7A7FA3C021746E1200E3FDD6 /* SwiftCode.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SwiftCode.plist; sourceTree = "<group>"; };
+		7A7FA3C22174735A00E3FDD6 /* TableViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewGroup.swift; sourceTree = "<group>"; };
 		7A9CF8F72148F74800CEE0D9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7A9CF8F9214912B100CEE0D9 /* OneTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTabBarViewController.swift; sourceTree = "<group>"; };
 		7A9CF8FB214912C400CEE0D9 /* TwoTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTabBarViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 		7A7DC5DD2154CF0800A97376 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				7A7FA37921703F5400E3FDD6 /* TableViewData.swift */,
 				7A7DC5E92154E00700A97376 /* CoreData.xcdatamodeld */,
 				7A7DC5E52154D7CD00A97376 /* CoreDataViewController.swift */,
 				7A7DC5EC2154E3F800A97376 /* CoreDataStack.swift */,
@@ -126,6 +135,9 @@
 			children = (
 				7A7DC5F0215A33A800A97376 /* UIKitViewController.swift */,
 				7A7FA377216C499400E3FDD6 /* CustomTableViewCell.swift */,
+				7A7FA3C22174735A00E3FDD6 /* TableViewGroup.swift */,
+				7A7FA37B2170402400E3FDD6 /* TableViewDetail.swift */,
+				7A7FA3C021746E1200E3FDD6 /* SwiftCode.plist */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -252,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AFCD34E2137D316008F5F51 /* Main.storyboard in Resources */,
+				7A7FA3C121746E1200E3FDD6 /* SwiftCode.plist in Resources */,
 				7A66AE2821338E0D00BEEB6F /* LaunchScreen.storyboard in Resources */,
 				7A66AE2521338E0D00BEEB6F /* Assets.xcassets in Resources */,
 			);
@@ -270,17 +283,20 @@
 				7A7DC5EB2154E00800A97376 /* CoreData.xcdatamodeld in Sources */,
 				7AFAC65921479124002544FF /* NewNavigationViewController.swift in Sources */,
 				7ABF9B08214F87490089E475 /* DisplayViewController.swift in Sources */,
+				7A7FA3C32174735A00E3FDD6 /* TableViewGroup.swift in Sources */,
 				7A66AE2021338E0B00BEEB6F /* NavigationController.swift in Sources */,
 				7A66AE1E21338E0B00BEEB6F /* AppDelegate.swift in Sources */,
 				7A7DC5E62154D7CD00A97376 /* CoreDataViewController.swift in Sources */,
 				7AD3B43521522F3C00F8A0F4 /* SQLiteViewController.swift in Sources */,
 				7A9CF8FC214912C400CEE0D9 /* TwoTabBarViewController.swift in Sources */,
+				7A7FA37C2170402400E3FDD6 /* TableViewDetail.swift in Sources */,
 				7ABF9B06214F86DF0089E475 /* UserDefaultsViewController.swift in Sources */,
 				7A9CF8F82148F74800CEE0D9 /* TabBarViewController.swift in Sources */,
 				7ABF9B03214B9F1B0089E475 /* GestureRecognizerViewController.swift in Sources */,
 				7AD3B454215237D300F8A0F4 /* SQLiteConnect.swift in Sources */,
 				7A7DC5ED2154E3F800A97376 /* CoreDataStack.swift in Sources */,
 				7A7DC5F1215A33A800A97376 /* UIKitViewController.swift in Sources */,
+				7A7FA37A21703F5400E3FDD6 /* TableViewData.swift in Sources */,
 				7AFAC65B214794C2002544FF /* DefaultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,21 +11,12 @@ import CoreData
 
 class CoreDataStack {
 
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "CoreData")
-        container.loadPersistentStores(completionHandler: ({
-                (storeDescription, error) in
-                if let error = error {
-                    fatalError("Unclear error\(error)")
-                }
-            })
-        )
-        return container
-    }()
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     lazy var contextDB:NSManagedObjectContext = {
-       return persistentContainer.viewContext
+
+       return appDelegate.persistentContainer.viewContext
     }()
     
     
